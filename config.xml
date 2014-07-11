@@ -41,6 +41,6 @@ Frank R. Nichols, Sr.
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
 		<gap:platform name="android" />
-		<icon src="icon_iac3mej6qpn2uocfl50or1fp32.png" gap:platform="android" gap:density="mdpi" />
+		<icon src="newico.jpg" gap:platform="android" gap:density="mdpi" />
 		<gap:splash src="dads%20face%20wide%20fb5.jpg" gap:platform="android" gap:density="mdpi" />
 	</widget>

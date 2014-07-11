@@ -3,7 +3,7 @@ var SILLY = (function(module) {
 		resultObject.prepend(Date() + '<br/>');
 		},
 	module.DoThat = function(resultObject) {
-		resultObject.prepend('hi there' + '<br/>');
+		resultObject.prepend('Lesson FIVE' + '<br/>');
 		};
 		return module;
 }(SILLY || {}));
