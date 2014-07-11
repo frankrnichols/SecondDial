@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.frankrnichols.lesson4"
-		versionCode="4"
-		version   = "0.4">
+		id        = "com.frankrnichols.lesson5"
+		versionCode="5"
+		version   = "0.5">
 		<name>Lesson4</name>
 		<description>
-Fourth selfteach lesson		</description>
+5th selfteach lesson		</description>
 		<author href="www.frankrnichols.com" email="frank.r.nichols1@gmail.com">
 Frank R. Nichols, Sr.
 		</author>
@@ -41,7 +41,6 @@ Frank R. Nichols, Sr.
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
 		<gap:platform name="android" />
-		<gap:platform name="winphone" />
 		<icon src="icon_iac3mej6qpn2uocfl50or1fp32.png" gap:platform="android" gap:density="mdpi" />
 		<gap:splash src="dads%20face%20wide%20fb5.jpg" gap:platform="android" gap:density="mdpi" />
 	</widget>
