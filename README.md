@@ -1,4 +1,4 @@
-Lesson5
-=======
+FirstDial
+=========
 
-Another small step in teaching myself effective use of HTML, CSS and JS for the hyperlapse controller demo
+First attempt at YUI dial
