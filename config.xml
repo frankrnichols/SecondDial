@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.frankrnichols.lesson5"
-		versionCode="5"
-		version   = "0.5">
-		<name>Lesson5</name>
+		id        = "com.frankrnichols.firstdial"
+		versionCode="1"
+		version   = "0.1">
+		<name>First Dial</name>
 		<description>
-5th selfteach lesson		</description>
+First attempt at YUI Dial widget		</description>
 		<author href="www.frankrnichols.com" email="frank.r.nichols1@gmail.com">
 Frank R. Nichols, Sr.
 		</author>
@@ -41,6 +41,6 @@ Frank R. Nichols, Sr.
 		<preference name="LoadUrlTimeoutValue" value="20000" />
 		<preference name="disable-cursor" value="true" />
 		<gap:platform name="android" />
-		<icon src="newico.jpg" gap:platform="android" gap:density="mdpi" />
+		<icon src="newico2.jpg" gap:platform="android" gap:density="mdpi" />
 		<gap:splash src="dads%20face%20wide%20fb5.jpg" gap:platform="android" gap:density="mdpi" />
 	</widget>
