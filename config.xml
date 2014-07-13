@@ -34,7 +34,7 @@ Frank R. Nichols, Sr.
 		<preference name="android-installLocation" value="internalOnly" />
 		<preference name="SplashScreenDelay" value="5000" />
 		<preference name="ErrorUrl" value=""/>
-		<preference name="BackgroundColor" value="0x000000"/>
+		<preference name="BackgroundColor" value="0x808080"/>
 		<preference name="KeepRunning" value="true"/>
 		<preference name="DisallowOverscroll" value="true"/>
 		<preference name="LoadingDialog" value=","/> 

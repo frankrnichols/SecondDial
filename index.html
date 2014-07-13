@@ -13,7 +13,7 @@
     #demo{
         margin:0;
         position:absolute;
-        top:75px; /* top of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
+        top:100px; /* top of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
         left:0;
     }
     .controls {
@@ -125,8 +125,8 @@
 
 <body class="yui3-skin-sam"> <!-- You need this skin class -->
 <div id="example_container">
-    <div id="view_frame">
-        <div id="scene">
+     <div id="view_frame">
+<!--        <div id="scene">
             <div id="stars"></div>
             <img id="hubble" src="http://yuilibrary.com/yui/docs/assets/dial/images/hubble.png"/>
             <img id="earth" src="http://yuilibrary.com/yui/docs/assets/dial/images/mountain_earth.png"/>
@@ -138,11 +138,11 @@
             <div class="label ozone">ozone</div>
             <div class="label crust">crust</div>
             <div class="label mantle">mantle</div>
-        </div>
-    </div>
+        </div> -->
+    </div> 
     <div class="controls">
         <div class="intro-sentence">My asshole <a id="a-hubble">Hubble</a></div>
-        <div id="altitude_mark"></div>
+<!--         <div id="altitude_mark">Hey</div> -->
         <div id="demo"></div>
     </div>
 </div>
@@ -151,13 +151,13 @@
 <script>
 YUI().use('dial', function(Y) {
 
-    var sceneH = Y.one('#scene').get('region').height,
-    subSea = 450,
+    var sceneH = Y.one('#example_container').get('region').height,
+    subSea = 50,
     viewFrameH = Y.one('#view_frame').get('region').height -2,
     zeroPt = 100,
     originY = -sceneH + subSea + viewFrameH - zeroPt;
 
-    Y.one('#scene').setStyle('top', originY + 'px');
+    Y.one('#example_container').setStyle('top', originY + 'px');
 
     /**
     * The Dial's valueChange event is passed to this.
@@ -166,7 +166,7 @@ YUI().use('dial', function(Y) {
     * overflow set to hidden.
     */
     setSceneY = function(e) {
-        Y.one('#scene').setStyle('top', (originY + (e.newVal * 10)) + 'px');
+        Y.one('#example_container').setStyle('top', (originY + (e.newVal * 10)) + 'px');
     }
 
     var dial = new Y.Dial({
@@ -178,7 +178,7 @@ YUI().use('dial', function(Y) {
         minorStep: 1,
         majorStep: 10,
         decimalPlaces: 0, 
-        strings:{label:'Altitude in Kilometers:', resetStr: 'Reset', tooltipHandle: 'Drag to set'},
+        strings:{label:'Alt:', resetStr: 'Reset', tooltipHandle: 'Drag to set'},
         // construction-time event subscription
         after : {
 <!--             valueChange: Y.bind( setSceneY, dial ) -->
