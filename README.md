@@ -7,7 +7,7 @@ First attempt at YUI dial
 SecondDial
 ==========
 
-On Saturday night, there were a few issues
+On Saturday night, there were a few issues:
 1. works just fine on first drag of handle, but once let go of handle (lift finger) it never works
 	correctly again. numbers are balky, handle goes zooming off the page, etc.
 		a. possible 'fix' to re-instantiate or re-build the dial any time a number does not change for 
