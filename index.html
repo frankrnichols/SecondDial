@@ -13,20 +13,16 @@
     #demo{
         margin:0;
         position:absolute;
-        top:100px; /* top of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
+        top:50px; /* top of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
         left:0;
     }
     .controls {
         position:absolute;
-        top:0;
+        top:10;
         left:50px; /* left of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
         margin:0 0 0 0; /* AND 'From Earth' AND the 'Hubble' link */
         color:#808080; /* This is color of 'From Earth to' */
         width:300px;
-    }
-    .controls a {
-        color:#4B78D9 !important; 
-        cursor:pointer;
     }
     .intro-sentence{
         font-size: 100%;
@@ -36,113 +32,12 @@
         top: 10px;
         width: 6em;
     }
-    #view_frame{ /* the frame in which the sky and earth slide up and down */
-        position:relative;
-        height:200px;
-        width:200px; /* if too narrow, text gets l-justified and truncated on the right */
-        border:solid 1px #cccccc;
-        overflow:hidden;
-    }
-    #scene{position:absolute;
-        left:0;
-        top:-340px;
-        height:340px;
-        width:100%;
-        background:url(../assets/dial/images/earth_to_hubble_bkg.png) repeat;
-    }
-    #altitude_mark {
-        border-top:solid 1px #CCCCCC;
-        left:-33px;
-        position:absolute;
-        top:103px;
-        width:30px;
-    }
-    #earth{
-        position:absolute;
-        left:0;
-        top:234px;
-        height:24px;
-        width:300px;
-    }
-    #hubble{
-        position:absolute;
-        left:5px;
-        top:7px;
-        height:93px;
-        width:90px;
-    }
-    #stars{
-        position:absolute;
-        left:0;
-        top:0;
-        background:url(../assets/dial/images/stars.png) repeat;
-        height:300px;
-        width:150px;
-    }
-    .label{
-        text-transform:uppercase;
-        width:100%;
-        letter-spacing:5px;
-        font-family:Verdana;
-        font-size:85%;
-        position:absolute;
-        left:0;
-        text-align:center;
-    }
-    .hubble{
-        bottom:60px;
-        color:#612C88;
-    }
-    .thermosphere{
-        bottom:120px;
-        color:#5A009D;
-    }
-    .mesosphere{
-        bottom:40px;
-        color:#570BFF;
-    }
-    .stratosphere{
-        bottom:140px;
-        color:#006999;
-    }
-    .troposphere{
-        bottom:77px;
-        color:#036585;
-    }
-    .ozone{
-        bottom:292px;
-        color:#005AAE;
-    }
-    .crust{
-        bottom:270px;
-        color:#4F2D00;
-    }
-    .mantle{
-        bottom:42px;
-        color:#897701;
-    }
 </style>
 
 <body class="yui3-skin-sam"> <!-- You need this skin class -->
 <div id="example_container">
-     <div id="view_frame">
-<!--        <div id="scene">
-            <div id="stars"></div>
-            <img id="hubble" src="http://yuilibrary.com/yui/docs/assets/dial/images/hubble.png"/>
-            <img id="earth" src="http://yuilibrary.com/yui/docs/assets/dial/images/mountain_earth.png"/>
-            <div class="label hubble">hubble</div>
-            <div class="label thermosphere">thermosphere</div>
-            <div class="label mesosphere">mesosphere</div>
-            <div class="label stratosphere">stratosphere</div>
-            <div class="label troposphere">troposphere</div>
-            <div class="label ozone">ozone</div>
-            <div class="label crust">crust</div>
-            <div class="label mantle">mantle</div>
-        </div> -->
-    </div> 
     <div class="controls">
-        <div class="intro-sentence">My asshole <a id="a-hubble">Hubble</a></div>
-<!--         <div id="altitude_mark">Hey</div> -->
+        <div class="intro-sentence">You are here <a id="a-hubble">Hubble</a></div>
         <div id="demo"></div>
     </div>
 </div>
@@ -151,23 +46,9 @@
 <script>
 YUI().use('dial', function(Y) {
 
-    var sceneH = Y.one('#example_container').get('region').height,
-    subSea = 50,
-    viewFrameH = Y.one('#view_frame').get('region').height -2,
-    zeroPt = 100,
-    originY = -sceneH + subSea + viewFrameH - zeroPt;
+    originY = 10;
 
     Y.one('#example_container').setStyle('top', originY + 'px');
-
-    /**
-    * The Dial's valueChange event is passed to this.
-    * sets the CSS top value of the pictoral scene of the earth to the hubble.
-    * This scene is an absolute positioned div inside another div with
-    * overflow set to hidden.
-    */
-    setSceneY = function(e) {
-        Y.one('#example_container').setStyle('top', (originY + (e.newVal * 10)) + 'px');
-    }
 
     var dial = new Y.Dial({
         min:-35,
