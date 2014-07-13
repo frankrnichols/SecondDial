@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.frankrnichols.firstdial"
-		versionCode="1"
-		version   = "0.1">
-		<name>First Dial</name>
+		id        = "com.frankrnichols.Seconddial"
+		versionCode="2"
+		version   = "0.2">
+		<name>Second Dial</name>
 		<description>
-First attempt at YUI Dial widget		</description>
+Second attempt at YUI Dial widget		</description>
 		<author href="www.frankrnichols.com" email="frank.r.nichols1@gmail.com">
 Frank R. Nichols, Sr.
 		</author>

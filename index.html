@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title>Second Dial</title>
+</head>
 <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
 
 <style>
@@ -9,15 +13,15 @@
     #demo{
         margin:0;
         position:absolute;
-        top:321px;
+        top:75px; /* top of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
         left:0;
     }
     .controls {
         position:absolute;
         top:0;
-        left:328px;
-        margin:0 0 0 0;
-        color:#808080;
+        left:50px; /* left of dial AND 'Altitude' label (causes overwrite of 'From Hubble' */
+        margin:0 0 0 0; /* AND 'From Earth' AND the 'Hubble' link */
+        color:#808080; /* This is color of 'From Earth to' */
         width:300px;
     }
     .controls a {
@@ -25,17 +29,17 @@
         cursor:pointer;
     }
     .intro-sentence{
-        font-size: 183%;
+        font-size: 100%;
         left: 0;
         line-height: 0.9em;
         position: absolute;
-        top: 273px;
+        top: 10px;
         width: 6em;
     }
-    #view_frame{ 
+    #view_frame{ /* the frame in which the sky and earth slide up and down */
         position:relative;
-        height:500px;
-        width:300px;
+        height:200px;
+        width:200px; /* if too narrow, text gets l-justified and truncated on the right */
         border:solid 1px #cccccc;
         overflow:hidden;
     }
@@ -137,7 +141,7 @@
         </div>
     </div>
     <div class="controls">
-        <div class="intro-sentence">From Earth to <a id="a-hubble">Hubble</a></div>
+        <div class="intro-sentence">My asshole <a id="a-hubble">Hubble</a></div>
         <div id="altitude_mark"></div>
         <div id="demo"></div>
     </div>
