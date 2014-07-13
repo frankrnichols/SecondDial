@@ -172,16 +172,16 @@ YUI().use('dial', function(Y) {
     var dial = new Y.Dial({
         min:-35,
         max:559,
-        stepsPerRevolution:30,
+        stepsPerRevolution:300,
         value: 0,
         diameter: 150,
         minorStep: 1,
         majorStep: 10,
-        decimalPlaces: 2, 
+        decimalPlaces: 0, 
         strings:{label:'Altitude in Kilometers:', resetStr: 'Reset', tooltipHandle: 'Drag to set'},
         // construction-time event subscription
         after : {
-            valueChange: Y.bind( setSceneY, dial )
+<!--             valueChange: Y.bind( setSceneY, dial ) -->
         }
     });
     dial.render('#demo');
